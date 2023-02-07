@@ -1,8 +1,9 @@
 import React from 'react'
+import SignIn from './components/sign-in/sign-in'
 
 function App() {
   return (
-    <div className='bg-black'>App</div>
+    <SignIn/>
   )
 }
 
