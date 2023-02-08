@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import MarketPage from "./pages/marketPage";
 
 function App() {
-  return (
-    <div className='bg-black'>App</div>
-  )
+  return <MarketPage />;
 }
 
-export default App
+export default App;
