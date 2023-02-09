@@ -1,8 +1,11 @@
 import React from "react";
+
+//pages
 import MarketPage from "./pages/marketPage";
 import LandingPage from "./pages/landingPage";
+import FormPage from "./reuse components/formPage";
 
-//router
+//routes
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProtecteRoute from "./reuse components/protecteRoute";
 
@@ -12,7 +15,9 @@ function App() {
       <Routes>
         <Route path="" element={<LandingPage />} />
         <Route element={<ProtecteRoute />}>
-          <Route path="/user" element={<MarketPage />} />
+          <Route path="/menu" element={<MarketPage />} />
+          <Route path="/login" element={<FormPage flag={0} />} />
+          <Route path="/signup" element={<FormPage flag={1} />} />
         </Route>
       </Routes>
     </BrowserRouter>
