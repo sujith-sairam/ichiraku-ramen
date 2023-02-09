@@ -100,8 +100,8 @@ function LandingPage() {
   return (
     <div>
       <HeaderNav />
-      <div className="absolute z-10 flex top-[8vh] justify-between w-[90vw] left-[5vw]">
-        <div className="text-white text-[3vw] relative top-[20vh] h-[400px]">
+      <div className="absolute z-10 flex top-[8em] justify-between w-[90vw] left-[5vw]">
+        <div className="text-white text-[3vw] relative top-[3em] h-[350px]">
           <div className="m-[10px]">I AM GONO BECOME A HOKAGE</div>
           <div className="m-[10px]">But First ,</div>
           <div className="flex">
@@ -116,7 +116,7 @@ function LandingPage() {
         <img
           src={sasuke}
           alt=""
-          className="w-[30vw] h-[90vh] skew-y-3 skew-x-3"
+          className="w-[30vw] h-[55em] skew-y-3 skew-x-3"
           styles="transform: scaleX(-1);"
         />
       </div>
