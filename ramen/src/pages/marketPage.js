@@ -1,11 +1,37 @@
+//react
 import React from "react";
-
 //reusable comps
 import FoodItem from "../reuse components/foodItem";
 import CartItem from "../reuse components/cartItem";
+// ramen images
+import misoRamen from "../asserts/misoRamen.png";
+import itchikaruRamen from "../asserts/ItchikaruRamen.png";
+import shioRamen from "../asserts/shioRamen.png";
+import shoyuRamen from "../asserts/shoyuRamen.png";
+import toknkotsuRamen from "../asserts/toknkotsuRamen.png";
+//toppings images
+import fishCakes from "../asserts/fishCakes.png";
+import chicken from "../asserts/chicken.png";
+import vegetables from "../asserts/vegetables.png";
+import egg from "../asserts/eggs.png";
+import soySauce from "../asserts/soySauce.png";
 
 function MarketPage() {
-  const iterator = [1, 2, 3, 4, 5];
+  const ramens = [
+    { name: "Miso Ramen", image: misoRamen },
+    { name: "Itchikaru Ramen", image: itchikaruRamen },
+    { name: "Shio Ramen", image: shioRamen },
+    { name: "Shoyu Ramen", image: shoyuRamen },
+    { name: "Toknkotsu Ramen", image: toknkotsuRamen },
+  ];
+  const toppingsAvailable = [
+    { name: "Fish cakes", image: fishCakes, price: 60 },
+    { name: "Chicken", image: chicken, price: 70 },
+    { name: "Vegetables", image: vegetables, price: 20 },
+    { name: "Eggs", image: egg, price: 10 },
+    { name: "Soy Sauce", image: soySauce, price: 5 },
+  ];
+
   return (
     <div className="flex">
       <div
@@ -17,8 +43,10 @@ function MarketPage() {
           <div>How u like it.</div>
         </div>
         <div className="m-[100px]">
-          {iterator.map((items) => (
-            <FoodItem />
+          {ramens.map((items) => (
+            <FoodItem
+              reamenDetails={{ ...items, toppings: toppingsAvailable }}
+            />
           ))}
         </div>
       </div>
